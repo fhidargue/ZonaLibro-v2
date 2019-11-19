@@ -1,21 +1,21 @@
-public class PerfilUsuario {
+public class RegistroUsuario {
     
     private String nombre;
     private String apellidos;
     private String id;
-    private String usuario;
     private String correo;
-    private String contrasena;
-    private String direccion;
+    private String dir;
+    private String usuario;
+    private String clave;
     
-    public PerfilUsuario(){
+    public RegistroUsuario(){
         this.nombre="";
         this.apellidos="";
         this.id="";
-        this.usuario="";
         this.correo="";
-        this.contrasena="";
-        this.direccion="";
+        this.dir="";
+        this.usuario="";
+        this.clave="";
     }
 
     public String getNombre() {
@@ -42,14 +42,6 @@ public class PerfilUsuario {
         this.id = id;
     }
 
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
     public String getCorreo() {
         return correo;
     }
@@ -58,20 +50,28 @@ public class PerfilUsuario {
         this.correo = correo;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getDir() {
+        return dir;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setDir(String dir) {
+        this.dir = dir;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
     
     
