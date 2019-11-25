@@ -1,17 +1,16 @@
 
 import javax.swing.JOptionPane;
 
-public class VentaLibros extends javax.swing.JFrame {
-
-    public VentaLibros() {
+public class PrestamoLibros extends javax.swing.JFrame {
+    public PrestamoLibros() {
         initComponents();
-        setTitle("LIBROS VENTA");
+        setTitle("LIBROS PRESTAMO");
         setSize(580,600);
         setResizable(false);
         setLocationRelativeTo(null);
         llenarCateg();
     }
-
+    
     public void llenarCateg(){
         jComboBox1.addItem("Aventura");
         jComboBox1.addItem("Ciencia Ficción");
@@ -23,7 +22,7 @@ public class VentaLibros extends javax.swing.JFrame {
     }
     
     public void buscar(){
-        VentaLibro n=new VentaLibro();
+        PrestamoLibro n=new PrestamoLibro();
         n.setCategoria(jComboBox1.getSelectedItem().toString());
         switch (n.getCategoria()) {
             case "Aventura":
@@ -33,9 +32,9 @@ public class VentaLibros extends javax.swing.JFrame {
                 jTextField2.setText("Harry Potter");
                 jTextField5.setText("Hojas perdidas");
                 jTextField8.setText("La Odisea");
-                jTextField3.setText(n.getCant_a1_v());
-                jTextField6.setText(n.getCant_a2_v());
-                jTextField9.setText(n.getCant_a3_v());
+                jTextField3.setText(n.getCant_a1_p());
+                jTextField6.setText(n.getCant_a2_p());
+                jTextField9.setText(n.getCant_a3_p());
                 break;
             case "Ciencia Ficción":
                 jTextField1.setText(n.getCategoria());
@@ -44,9 +43,9 @@ public class VentaLibros extends javax.swing.JFrame {
                 jTextField2.setText("Guerra de los Mundos");
                 jTextField5.setText("Soy Leyenda");
                 jTextField8.setText("Star Wars");
-                jTextField3.setText(n.getCant_cf1_v());
-                jTextField6.setText(n.getCant_cf2_v());
-                jTextField9.setText(n.getCant_cf3_v());
+                jTextField3.setText(n.getCant_cf1_p());
+                jTextField6.setText(n.getCant_cf2_p());
+                jTextField9.setText(n.getCant_cf3_p());
                 break;
             case "Cuentos de Hadas":
                 jTextField1.setText(n.getCategoria());
@@ -55,9 +54,9 @@ public class VentaLibros extends javax.swing.JFrame {
                 jTextField2.setText("Blanca Nieves");
                 jTextField5.setText("El Patito Feo");
                 jTextField8.setText("Rapunzel");
-                jTextField3.setText(n.getCant_ch1_v());
-                jTextField6.setText(n.getCant_ch2_v());
-                jTextField9.setText(n.getCant_ch3_v());
+                jTextField3.setText(n.getCant_ch1_p());
+                jTextField6.setText(n.getCant_ch2_p());
+                jTextField9.setText(n.getCant_ch3_p());
                 break;
             case "Fantasía":
                 jTextField1.setText(n.getCategoria());
@@ -66,9 +65,9 @@ public class VentaLibros extends javax.swing.JFrame {
                 jTextField2.setText("Camino de Sombras");
                 jTextField5.setText("Jardines de la Luna");
                 jTextField8.setText("Hadas del Reino");
-                jTextField3.setText(n.getCant_f1_v());
-                jTextField6.setText(n.getCant_f2_v());
-                jTextField9.setText(n.getCant_f3_v());
+                jTextField3.setText(n.getCant_f1_p());
+                jTextField6.setText(n.getCant_f2_p());
+                jTextField9.setText(n.getCant_f3_p());
                 break;
             case "Gótica":
                 jTextField1.setText(n.getCategoria());
@@ -77,9 +76,9 @@ public class VentaLibros extends javax.swing.JFrame {
                 jTextField2.setText("Fantasma de la ópera");
                 jTextField5.setText("El Monje");
                 jTextField8.setText("Frankenstein");
-                jTextField3.setText(n.getCant_g1_v());
-                jTextField6.setText(n.getCant_g2_v());
-                jTextField9.setText(n.getCant_g3_v());
+                jTextField3.setText(n.getCant_g1_p());
+                jTextField6.setText(n.getCant_g2_p());
+                jTextField9.setText(n.getCant_g3_p());
                 break;
             case "Policíaca":
                 jTextField1.setText(n.getCategoria());
@@ -88,9 +87,9 @@ public class VentaLibros extends javax.swing.JFrame {
                 jTextField2.setText("La pareja de al lado");
                 jTextField5.setText("Tristeza del Samurai");
                 jTextField8.setText("No cierres los ojos");
-                jTextField3.setText(n.getCant_pl1_v());
-                jTextField6.setText(n.getCant_pl2_v());
-                jTextField9.setText(n.getCant_pl3_v());
+                jTextField3.setText(n.getCant_pl1_p());
+                jTextField6.setText(n.getCant_pl2_p());
+                jTextField9.setText(n.getCant_pl3_p());
                 break;
             case "Paranormal":
                 jTextField1.setText(n.getCategoria());
@@ -99,9 +98,9 @@ public class VentaLibros extends javax.swing.JFrame {
                 jTextField2.setText("Alados");
                 jTextField5.setText("Pasaje al Misterio");
                 jTextField8.setText("Sobrenatural");
-                jTextField3.setText(n.getCant_pa1_v());
-                jTextField6.setText(n.getCant_pa2_v());
-                jTextField9.setText(n.getCant_pa3_v());
+                jTextField3.setText(n.getCant_pa1_p());
+                jTextField6.setText(n.getCant_pa2_p());
+                jTextField9.setText(n.getCant_pa3_p());
                 break;
             default:
                 break;
@@ -109,49 +108,49 @@ public class VentaLibros extends javax.swing.JFrame {
     }
     
     public void modificar(){
-        VentaLibro n=new VentaLibro();
+        PrestamoLibro n=new PrestamoLibro();
         n.setCategoria(jComboBox1.getSelectedItem().toString());
         switch (n.getCategoria()) {
             case "Aventura":
-                n.setCant_a1_v(jTextField3.getText());
-                n.setCant_a2_v(jTextField6.getText());
-                n.setCant_a3_v(jTextField9.getText());
+                n.setCant_a1_p(jTextField3.getText());
+                n.setCant_a2_p(jTextField6.getText());
+                n.setCant_a3_p(jTextField9.getText());
                 JOptionPane.showMessageDialog(null, "¡Datos Modificados!", "MODIFICACION DE DATOS", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Ciencia Ficción":
-                n.setCant_cf1_v(jTextField3.getText());
-                n.setCant_cf2_v(jTextField6.getText());
-                n.setCant_cf3_v(jTextField9.getText());
+                n.setCant_cf1_p(jTextField3.getText());
+                n.setCant_cf2_p(jTextField6.getText());
+                n.setCant_cf3_p(jTextField9.getText());
                 JOptionPane.showMessageDialog(null, "¡Datos Modificados!", "MODIFICACION DE DATOS", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Cuentos de Hadas":
-                n.setCant_ch1_v(jTextField3.getText());
-                n.setCant_ch2_v(jTextField6.getText());
-                n.setCant_ch3_v(jTextField9.getText());
+                n.setCant_ch1_p(jTextField3.getText());
+                n.setCant_ch2_p(jTextField6.getText());
+                n.setCant_ch3_p(jTextField9.getText());
                 JOptionPane.showMessageDialog(null, "¡Datos Modificados!", "MODIFICACION DE DATOS", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Fantasía":
-                n.setCant_f1_v(jTextField3.getText());
-                n.setCant_f2_v(jTextField6.getText());
-                n.setCant_f3_v(jTextField9.getText());
+                n.setCant_f1_p(jTextField3.getText());
+                n.setCant_f2_p(jTextField6.getText());
+                n.setCant_f3_p(jTextField9.getText());
                 JOptionPane.showMessageDialog(null, "¡Datos Modificados!", "MODIFICACION DE DATOS", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Gótica":
-                n.setCant_g1_v(jTextField3.getText());
-                n.setCant_g2_v(jTextField6.getText());
-                n.setCant_g3_v(jTextField9.getText());
+                n.setCant_g1_p(jTextField3.getText());
+                n.setCant_g2_p(jTextField6.getText());
+                n.setCant_g3_p(jTextField9.getText());
                 JOptionPane.showMessageDialog(null, "¡Datos Modificados!", "MODIFICACION DE DATOS", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Policíaca":
-                n.setCant_pl1_v(jTextField3.getText());
-                n.setCant_pl2_v(jTextField6.getText());
-                n.setCant_pl3_v(jTextField9.getText());
+                n.setCant_pl1_p(jTextField3.getText());
+                n.setCant_pl2_p(jTextField6.getText());
+                n.setCant_pl3_p(jTextField9.getText());
                 JOptionPane.showMessageDialog(null, "¡Datos Modificados!", "MODIFICACION DE DATOS", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case "Paranormal":                
-                n.setCant_pa1_v(jTextField3.getText());
-                n.setCant_pa2_v(jTextField6.getText());
-                n.setCant_pa3_v(jTextField9.getText());
+                n.setCant_pa1_p(jTextField3.getText());
+                n.setCant_pa2_p(jTextField6.getText());
+                n.setCant_pa3_p(jTextField9.getText());
                 JOptionPane.showMessageDialog(null, "¡Datos Modificados!", "MODIFICACION DE DATOS", JOptionPane.INFORMATION_MESSAGE);
                 break;
             default:
@@ -159,39 +158,37 @@ public class VentaLibros extends javax.swing.JFrame {
         }
     }
     
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jTextField7 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jTextField8 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jTextField14 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jTextField15 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel1.setText("Libros para Venta");
+        jLabel1.setText("Libros para Préstamo");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Seleccione una categoría:");
@@ -285,15 +282,15 @@ public class VentaLibros extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+                .addComponent(jLabel1)
+                .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(48, 48, 48)
                 .addComponent(jLabel1)
-                .addGap(45, 45, 45)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -328,11 +325,15 @@ public class VentaLibros extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         buscar();
@@ -345,10 +346,6 @@ public class VentaLibros extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         modificar();
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -364,20 +361,20 @@ public class VentaLibros extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentaLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrestamoLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentaLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrestamoLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentaLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrestamoLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentaLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrestamoLibros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentaLibros().setVisible(true);
+                new PrestamoLibros().setVisible(true);
             }
         });
     }
@@ -393,9 +390,6 @@ public class VentaLibros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
