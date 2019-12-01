@@ -66,14 +66,15 @@ public class RegistroUsuarios extends javax.swing.JFrame {
                     dir=entrada.readUTF();
                     usu=entrada.readUTF();
                     clav=entrada.readUTF();
-                    if(id.equals(jTextField4.getText())){
+                    
                         jTextField1.setText(nom);
                         jTextField2.setText(ape);
                         jTextField3.setText(cor);
+                        jTextField4.setText(id);
                         jTextField5.setText(clav);
                         jTextField6.setText(usu);
                         jTextArea1.setText(dir);
-                    }
+                    
                 }
             }catch (EOFException ex) {
                 entrada.close();
@@ -347,7 +348,7 @@ public class RegistroUsuarios extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         agregar();
-        new Inicio().setVisible(true);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

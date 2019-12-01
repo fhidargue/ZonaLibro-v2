@@ -57,12 +57,13 @@ public class InventarioInfoPersonal extends javax.swing.JFrame {
                     ced=entrada.readUTF();
                     cor=entrada.readUTF();
                     id=entrada.readUTF();
-                    if(id.equals(jTextField5.getText())){
+                    
                         jTextField1.setText(nom);
                         jTextField2.setText(ape);
                         jTextField3.setText(cor);
                         jTextField4.setText(ced);
-                    }
+                        jTextField5.setText(id);
+                   
                 }
             }catch (EOFException ex) {
                 entrada.close();

@@ -8,17 +8,16 @@
  *
  * @author Melissa
  */
-public class Carrito {
+public class Carrito extends Libro{
      private int cuentaTotal = 0;
-     private double precio=0;
     
     
     public Carrito() {
+        super();
         cuentaTotal = 0;
-        this.precio=6800; //precio provisional
     }
     
-    
+   
     public void añadirPrecio(int precio){
         cuentaTotal += precio;
     }
