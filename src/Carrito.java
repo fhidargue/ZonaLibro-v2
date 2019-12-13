@@ -8,7 +8,7 @@
  *
  * @author Melissa
  */
-public class Carrito extends Libro{
+public class Carrito extends VentaLibro{
      private int cuentaTotal = 0;
     
     

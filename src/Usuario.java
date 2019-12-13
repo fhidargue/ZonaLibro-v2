@@ -19,7 +19,36 @@ public class Usuario extends javax.swing.JFrame {
     }
      
     public void inicioUsuario (){
-     
+      String usu, clav;
+      boolean existe=false;
+        try{
+            DataInputStream entrada = new DataInputStream(new FileInputStream("datos.dat"));
+            try{
+                while((true)&&(existe==false)){
+                    
+                    usu=entrada.readUTF();
+                    clav=entrada.readUTF();
+                    
+                        jTextField1.setText(usu);
+                        jTextField2.setText(clav);
+                     
+                        
+                      if((jTextField1.getText().equals(usu))&&(jTextField2.getText().equals(clav))){
+                           existe=true; 
+        }  
+                    
+                }
+                if(existe==true){
+                 new VentaLibrosUsuarios().setVisible(true); 
+                }
+            }catch (EOFException ex) {
+                entrada.close();
+            }
+        }catch (FileNotFoundException ex){
+            JOptionPane.showMessageDialog(null,"Archivo no encontrado", "Archivo no existe",JOptionPane.ERROR_MESSAGE);
+        } catch (IOException ex){
+            JOptionPane.showMessageDialog(null,"Error al leer", "Error al leer", JOptionPane.ERROR_MESSAGE);
+        }
         
     }
         
@@ -136,8 +165,7 @@ public class Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new VentaLibrosUsuarios().setVisible(true);
-        
+        inicioUsuario();    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
