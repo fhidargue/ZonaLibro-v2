@@ -26,14 +26,14 @@ public class Compra extends javax.swing.JFrame {
 
     public void comprar(){
        if(jTextField1.getText().equals("Harry Potter")){
-           jTextField2.setText(String.valueOf(12500));
+           jTextField2.setText(String.valueOf(6500));
            if(jRadioButton1.isSelected()){
                jTextField3.setText(String.valueOf(12500+950));
            }else if(jRadioButton2.isSelected()){
                jTextField3.setText(" ");
            }
        }else if(jTextField1.getText().equals("Hojas perdidas")){
-           jTextField2.setText(String.valueOf(6500));
+           jTextField2.setText(String.valueOf(12500));
            if(jRadioButton1.isSelected()){
                jTextField3.setText(String.valueOf(6500+950));
            }else if(jRadioButton2.isSelected()){
